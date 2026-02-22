@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>FI 5s Click Task (30s)</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="app">
+    <div class="topbar">
+      <div id="timer" class="timer">30.0s</div>
+    </div>
+
+    <button id="target" class="target" aria-label="Click target" disabled>
+      CLICK FOR POINTS
+    </button>
+
+    <div class="bottombar">
+      <div class="points">Points: <span id="points">0</span></div>
+      <button id="start" class="start">Start (90s)</button>
+    </div>
+
+    <!-- End-of-session results (hidden until finished) -->
+    <section id="results" class="results hidden">
+      <h2>Session Complete</h2>
+      <p>Total clicks (responses): <strong id="clickCount">0</strong></p>
+      <p>Total points earned: <strong id="pointCount">0</strong></p>
+
+      <h3>Cumulative Record</h3>
+      <p class="hint">Time (s) on X-axis, cumulative responses on Y-axis.</p>
+      <canvas id="cumRecord" width="900" height="350"></canvas>
+
+      <div class="actions">
+        <button id="reset" class="reset">Reset</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
