@@ -149,7 +149,7 @@ function drawCumulativeRecord() {
 
   // Determine max values
   const maxT = SESSION_SECONDS;
-  const maxR = 250; // fixed Y-axis max for consistency
+  const maxR = 400; // fixed Y-axis max for consistency
 
   // Axes
   ctx.globalAlpha = 1;
