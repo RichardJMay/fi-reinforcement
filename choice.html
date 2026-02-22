@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Choice Task (90s)</title>
+  <link rel="stylesheet" href="choice.css" />
+</head>
+<body>
+  <main class="app">
+    <header class="topbar">
+      <div class="timer">Time left: <span id="timer">90.0</span>s</div>
+      <button id="start" class="start">Start (90s)</button>
+      <a class="link" href="index.html">Back to FI task</a>
+    </header>
+
+    <section class="buttons">
+      <button class="choice no-loss" id="btnNoLoss" disabled>NO LOSS</button>
+      <button class="choice s5" id="btn5" disabled>5 SECONDS</button>
+      <button class="choice s10" id="btn10" disabled>10 SECONDS</button>
+      <button class="choice s20" id="btn20" disabled>20 SECONDS</button>
+    </section>
+
+    <footer class="bottombar">
+      <div class="points-fixed">Points total: <span class="points-num">100</span></div>
+    </footer>
+
+    <!-- Results only appear at end -->
+    <section id="results" class="results hidden">
+      <h2>Session Complete</h2>
+      <p>Total presses:</p>
+      <ul class="totals">
+        <li>No loss: <strong id="countNoLoss">0</strong></li>
+        <li>5 seconds: <strong id="count5">0</strong></li>
+        <li>10 seconds: <strong id="count10">0</strong></li>
+        <li>20 seconds: <strong id="count20">0</strong></li>
+      </ul>
+
+      <h3>Bar graph (cumulative totals)</h3>
+      <canvas id="barChart" width="900" height="360"></canvas>
+
+      <div class="actions">
+        <button id="reset" class="reset">Reset</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="choice.js"></script>
+</body>
+</html>

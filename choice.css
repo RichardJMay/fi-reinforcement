@@ -1,0 +1,134 @@
+:root {
+  --bg: #0b0f17;
+  --panel: #121a2a;
+  --text: #e8eefc;
+  --muted: #a9b5d4;
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+}
+
+.app {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto auto;
+  gap: 16px;
+  padding: 16px;
+}
+
+.topbar {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.timer {
+  background: var(--panel);
+  padding: 10px 14px;
+  border-radius: 12px;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.start, .reset {
+  border: 0;
+  padding: 10px 14px;
+  border-radius: 12px;
+  background: #22304b;
+  color: var(--text);
+  cursor: pointer;
+  font-weight: 700;
+}
+.start:disabled { opacity: 0.5; cursor: not-allowed; }
+
+.link {
+  color: var(--muted);
+  text-decoration: none;
+  padding: 10px 12px;
+}
+.link:hover { text-decoration: underline; }
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(240px, 1fr));
+  gap: 18px;
+  align-content: center;
+  justify-content: center;
+  max-width: 900px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.choice {
+  border: 0;
+  border-radius: 18px;
+  padding: 26px 18px;
+  font-size: 26px;
+  font-weight: 900;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  color: #0b0f17;
+  min-height: 120px;
+  transition: transform 0.05s ease;
+  box-shadow: 0 12px 30px rgba(0,0,0,.25);
+}
+.choice:active { transform: scale(0.98); }
+.choice:disabled { opacity: 0.45; cursor: not-allowed; box-shadow: none; }
+
+.no-loss { background: #e9f0ff; }
+.s5     { background: #b8f7d2; }
+.s10    { background: #ffe9a6; }
+.s20    { background: #ffb5b5; }
+
+.bottombar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--panel);
+  padding: 12px 14px;
+  border-radius: 14px;
+}
+
+.points-fixed {
+  font-size: 20px;
+  font-weight: 800;
+}
+.points-num {
+  font-size: 28px;
+  font-weight: 950;
+  margin-left: 8px;
+  color: #ffffff;
+}
+
+.results {
+  background: var(--panel);
+  padding: 16px;
+  border-radius: 14px;
+  max-width: 980px;
+  margin: 0 auto;
+  width: 100%;
+}
+.hidden { display: none; }
+
+.totals { margin-top: 6px; }
+canvas {
+  width: 100%;
+  height: auto;
+  background: #0e1524;
+  border-radius: 12px;
+  margin-top: 10px;
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 12px;
+}
